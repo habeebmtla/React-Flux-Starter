@@ -15,9 +15,12 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    AppAction.getApi('users','/users')
   }
 
   render() {
+    let {users} = this.state.sample
+    console.log(users)
     return (
       <div className="container" >
         <h1>Hi I am starter react flux</h1>
