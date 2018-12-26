@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'flux/utils';
 import SampleStore from '../../stores/SampleStore';
 import AppAction from '../../actions/AppActionCreators';
+import Loader from '../Loader'
 
 class Home extends Component {
   static getStores() {
@@ -23,6 +24,7 @@ class Home extends Component {
     console.log(users)
     return (
       <div className="container" >
+        {users.loading && <Loader />}
         <h1>Hi I am starter react flux</h1>
       </div>
     );
