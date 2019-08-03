@@ -20,11 +20,11 @@ class Home extends Component {
   }
 
   render() {
-    let {users} = this.state.sample
+    let {users,loading} = this.state.sample
     console.log(users)
     return (
       <div className="container" >
-        {users.loading && <Loader />}
+        {loading && <Loader />}
         <h1>Hi I am starter react flux</h1>
       </div>
     );
