@@ -5,11 +5,12 @@ import {API_URL} from '../utils/constants';
 
 import './Interceptor'
 
+axios.defaults.baseURL = API_URL;
 
 const AppActionCreators = {
 
   getApi(name,endpoint) {
-    axios.get(API_URL+endpoint)
+    axios.get(endpoint)
     .then(res => {
         this.setInputs({[name]:res.data});      
     })
