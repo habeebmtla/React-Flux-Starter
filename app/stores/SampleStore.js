@@ -13,10 +13,7 @@ class SampleStore extends ReduceStore {
   reduce(state, action) {
     switch (action.type) {
       case ActionTypes.SET_INPUTS:
-        return {
-          ...state,
-          users: action.data
-        }       
+        return Object.assign({},state,action.data)      
       default:
         return state;
     }
